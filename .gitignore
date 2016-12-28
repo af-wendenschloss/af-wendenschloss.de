@@ -1,0 +1,7 @@
+/.idea
+*.ipr
+/tools/bin/hugo
+/tools/bin/hugo.exe
+/tools/bin/hugo.version
+
+/src/public

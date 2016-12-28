@@ -1,0 +1,3 @@
+[submodule "src/themes/hugo-tranquilpeak-theme"]
+	path = src/themes/hugo-tranquilpeak-theme
+	url = git://github.com/blaubaer/hugo-tranquilpeak-theme.git

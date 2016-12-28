@@ -1,0 +1,10 @@
+language: go
+go: 1.7
+install:
+  - go build -o tools/bin/update_hugo tools/src/update_hugo.go
+  - tools/bin/update_hugo
+  - tools/bin/hugo version
+script:
+  - cd src
+  - ../tools/bin/hugo --baseURL ${BASE_URL}
+  - sh ../tools/bin/upload.sh
