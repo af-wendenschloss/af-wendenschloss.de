@@ -2,3 +2,13 @@ nav#sidebar .sidebar-profile-name {
     margin-left: 1em;
     margin-right: 1em;
 }
+
+#sidebar {
+    text-shadow: 0 0 15px #E0CEA4;
+}
+
+#sidebar .sidebar-profile-name,
+#sidebar .sidebar-profile-bio,
+#sidebar .sidebar-button-link {
+    color: #372E28 !important;
+}

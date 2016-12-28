@@ -15,7 +15,7 @@ Dieses Repository enthält dies Qullen der Seite [af-wendenschloss.de](https://a
    Browser aufruft. Jede Änderung die man an einer Datei macht, kann man sofort in Browser sehen,
    solange dieses Programm läuft. Einzig im Browser sollte man nach jeder Änderung die Taste ``[F5]``
    drücken, wodurch der Browser die Seite komplett neu lädt.
-5. Ist man mit seiner Arbeit fertig klickt man auf das rote Viereck in dem unteren Bereich (``local_server``)
+5. Ist man mit seiner Arbeit fertig klickt man auf das rote Kreuz in dem unteren Bereich (``local_server``)
    von IntelliJ IDEA. Hierdurch wird das Skript gestoppt.
 
 ### Änderungen veröffentlichen
