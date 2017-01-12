@@ -41,13 +41,14 @@ func isUpdateRequired(version string) bool {
 	if err != nil {
 		return true
 	}
-	actual := strings.TrimSpace(string(content))
-	return actual != version
+	var goos, goarch, actual string
+	fmt.Sscanf(strings.TrimSpace(string(content)), "%s\t%s\t%s", &goos, &goarch, &actual)
+	return goos != runtime.GOOS || goarch != runtime.GOARCH || actual != version
 }
 
 func storeLatestVersionHint(version string) {
 	versionFilename := resolveTargetVersionFilename()
-	err := ioutil.WriteFile(versionFilename, []byte(version), 0555)
+	err := ioutil.WriteFile(versionFilename, []byte(fmt.Sprintf("%s\t%s\t%s", runtime.GOOS, runtime.GOARCH, version)), 0555)
 	if err != nil {
 		log.Fatalf("Could not store file version hint. Got: %v", err)
 	}
@@ -195,7 +196,7 @@ func resolveDownloadUrl(release Release) string {
 			return asset.BrowserDownloadUrl
 		}
 	}
-	log.Fatalf("Cannot find a suitable download url for latest release: %v", release.Name)
+	log.Fatalf("Cannot find a suitable download url for latest release: %v", release.Version)
 	return ""
 }
 
@@ -267,27 +268,34 @@ func getLatestRelease() Release {
 		log.Fatalf("Could not execute request to download latest release information from GitHub. Got: %v", err)
 	}
 	defer resp.Body.Close()
-	if resp.StatusCode != 200 {
-		buf := new(bytes.Buffer)
-		io.Copy(buf, resp.Body)
-		log.Fatalf("Got illegal response: %s", buf.String())
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatalf("Could read body of request to download latest release information from GitHub. Got: %v", err)
 	}
-	decoder := json.NewDecoder(resp.Body)
+	if resp.StatusCode != 200 {
+		log.Fatalf("Got illegal response: %s", string(body))
+	}
 	result := Release{}
-	err = decoder.Decode(&result)
+	err = json.Unmarshal(body, &result)
 	if err != nil {
 		log.Fatalf("Could not decode the response from GitHub. Got: %v", err)
 	}
-	if !strings.HasPrefix(result.Name, "v") || len(result.Name) < 2 {
-		log.Fatalf("Unsupported release name: %s", result.Name)
+	if len(result.Name) > 2 && strings.HasPrefix(result.Name, "v") {
+		result.Version = result.Name[1:]
+		return result
 	}
-	result.Version = result.Name[1:]
-	return result
+	if len(result.TagName) > 2 && strings.HasPrefix(result.TagName, "v") {
+		result.Version = result.TagName[1:]
+		return result
+	}
+	log.Fatalf("Unsupported response: %s", string(body))
+	return Release{}
 }
 
 type Release struct {
 	Id      int64 `json:"id"`
 	Name    string `json:"name"`
+	TagName string `json:"tag_name"`
 	Version string
 	Assets  []Asset `json:"assets"`
 }
