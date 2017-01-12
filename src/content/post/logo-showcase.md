@@ -15,5 +15,8 @@ Demonstriert die möglichen Logos.
 Nur der Fisch
 ![Nur der Fisch](/images/logo.png)
 
+Nur der Fisch Umriss
+![Nur der Fisch Umriss](/images/logo-outline.png)
+
 Abzeichen
 ![Abzeichen](/images/badge.png)
