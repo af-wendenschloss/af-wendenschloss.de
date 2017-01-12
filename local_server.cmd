@@ -13,7 +13,7 @@ set DIRECTORY=%SCRIPT:~0,-1%
 "%DIRECTORY%\tools\bin\update_hugo.exe"
 if not errorlevel 0 goto :EOF
 cd "%DIRECTORY%\src"
-"%DIRECTORY%\tools\bin\hugo.exe"  server --buildDrafts
+"%DIRECTORY%\tools\bin\hugo.exe"  server --port=1313 --buildDrafts
 cd "%OLD_CD%"
 
 :EOF
