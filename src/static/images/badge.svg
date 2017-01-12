@@ -17,7 +17,7 @@
    id="svg8"
    inkscape:version="0.92.0 r15299"
    sodipodi:docname="badge.svg"
-   inkscape:export-filename="D:\development\github.com\af-wendenschloss\af-wendenschloss.de\src\static\images\logo.png"
+   inkscape:export-filename="D:\development\github.com\af-wendenschloss\af-wendenschloss.de\src\static\images\badge.png"
    inkscape:export-xdpi="50.672161"
    inkscape:export-ydpi="50.672161">
   <defs
@@ -46,7 +46,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="161.67518"
+     inkscape:cx="-181.77668"
      inkscape:cy="477.56924"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -77,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
