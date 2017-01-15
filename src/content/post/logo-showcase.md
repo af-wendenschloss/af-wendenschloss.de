@@ -18,5 +18,8 @@ Nur der Fisch
 Nur der Fisch Umriss
 ![Nur der Fisch Umriss](/images/logo-outline.png)
 
-Abzeichen
-![Abzeichen](/images/badge.png)
+Abzeichen 1
+![Abzeichen 1](/images/badge.png)
+
+Abzeichen 2
+![Abzeichen 2](/images/badge2.png)

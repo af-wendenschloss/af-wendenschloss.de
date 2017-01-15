@@ -16,8 +16,8 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.0 r15299"
-   sodipodi:docname="badge.svg"
-   inkscape:export-filename="D:\development\github.com\af-wendenschloss\af-wendenschloss.de\src\static\images\badge.png"
+   sodipodi:docname="badge2.svg"
+   inkscape:export-filename="D:\development\github.com\af-wendenschloss\af-wendenschloss.de\src\static\images\badge2.png"
    inkscape:export-xdpi="50.672161"
    inkscape:export-ydpi="50.672161">
   <title
@@ -53,7 +53,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="342.4621"
+     inkscape:cx="226.29455"
      inkscape:cy="511.46288"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -194,13 +194,13 @@
      id="layer1"
      transform="translate(0,-32.416653)">
     <circle
-       style="fill:#ffff54;fill-opacity:1;stroke:#0b0b00;stroke-width:1.32291663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#fffff9;fill-opacity:1;stroke:#0b0b00;stroke-width:1.32291663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4548"
        cx="132.29167"
        cy="164.70831"
        r="130.92784" />
     <circle
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32291663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffff52;fill-opacity:1;stroke:#000000;stroke-width:1.32291663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4548-3"
        cx="132.29167"
        cy="164.70831"
