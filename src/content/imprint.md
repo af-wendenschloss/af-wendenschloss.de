@@ -18,3 +18,6 @@ Ostendorfstraße 11<br>
 
 #### Telefon
 [(030) 6517391](tel:0306517391)
+
+#### Email
+[kontakt@af-wendenschloss.de](mailto:kontakt@af-wendenschloss.de)
